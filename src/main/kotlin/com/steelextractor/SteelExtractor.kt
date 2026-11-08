@@ -48,6 +48,8 @@ import com.steelextractor.extractors.Potions
 import com.steelextractor.extractors.StructureStarts
 import com.steelextractor.extractors.Tags
 import com.steelextractor.extractors.Waxables
+import com.steelextractor.extractors.EnvironmentAttributes
+import com.steelextractor.extractors.Flammables
 import kotlinx.io.IOException
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
@@ -272,6 +274,8 @@ object SteelExtractor : ModInitializer {
         addUnlessDisabled("WEATHERING") { Weathering() }
         addUnlessDisabled("CANDLE_CAKES") { CandleCakes() }
         addUnlessDisabled("WAXABLES") { Waxables() }
+        addUnlessDisabled("ENVIRONMENT_ATTRIBUTES") { EnvironmentAttributes() }
+        addUnlessDisabled("FLAMMABLES") { Flammables() }
         addUnlessDisabled("POI_TYPES") { PoiTypesExtractor() }
         addUnlessDisabled("GAME_EVENTS") { GameEvents() }
         addUnlessDisabled("CUSTOM_STATS") { CustomStatRegistryExtractor() }
